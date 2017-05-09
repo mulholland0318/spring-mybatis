@@ -133,7 +133,8 @@ public class UserControllerTest extends BaseControllerTest{
                 .andExpect(MockMvcResultMatchers.content().string(CoreMatchers.containsString("var")));//验证渲染后的视图内容包含var
 
         mockMvc.perform(MockMvcRequestBuilders.get("/static/app1.js")) //执行请求
-                .andExpect(status().isNotFound());  //验证状态码404
+                .andExpect(status().isNotFound());  //验证状态码
+
     }
 
 }
